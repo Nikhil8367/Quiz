@@ -132,18 +132,6 @@ input:focus::placeholder {
     background: #dc3545;
     color: rgb(255, 255, 255);
 }
-.custom-div {
-    max-width: 700px; /* Adjust as needed */
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.2); /* Adjust transparency */
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
 
     </style>
 </head>
@@ -303,29 +291,18 @@ function submitQuiz() {
     document.exitFullscreen();
 }
 function displayResults(results) {
-    document.body.innerHTML += `
-    <div class="custom-div">
-
-            <h2 style="margin-bottom: 10px;">🎉 Quiz Completed</h2>
+    document.body.innerHTML = `
+        <div style="max-width: 500px; margin: auto; padding: 20px; text-align: center; background: #222; color: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <h2>🎉 Quiz Completed</h2>
             <p><strong>Team:</strong> ${results.teamName}</p>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.2); margin: 10px 0;">
+            <hr style="border: 0; height: 1px; background: #555; margin: 10px 0;">
             <p><strong>Total Questions:</strong> ${results.totalQuestions}</p>
             <p><strong>Attempted:</strong> ${results.attempted}</p>
             <p><strong>Correct:</strong> ${results.correct}</p>
             <p><strong>Wrong:</strong> ${results.wrong}</p>
             <p><strong>Score:</strong> ${results.score}</p>
             <p><strong>Time Taken:</strong> ${results.timeTaken}</p>
-            <button class="btn" onclick="resetQuiz()" style="
-                background: rgba(255, 0, 0, 0.8); 
-                color: white; 
-                padding: 10px 20px; 
-                border: none; 
-                border-radius: 5px; 
-                cursor: pointer;
-                transition: 0.3s;
-            " onmouseover="this.style.background='red'" onmouseout="this.style.background='rgba(255, 0, 0, 0.8)'">
-                Reset Quiz
-            </button>
+            <button class="btn" onclick="resetQuiz()" style="background: red; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset Quiz</button>
         </div>
     `;
 }
@@ -443,6 +420,8 @@ document.addEventListener("copy", (e) => e.preventDefault());
 setInterval(() => {
     console.log("%c ", "font-size: 200px; background: red;");
 }, 1);
+
+
     </script>
     
 </body>
