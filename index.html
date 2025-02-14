@@ -139,7 +139,7 @@ input:focus::placeholder {
     <div class="container" id="start-container">
         <h1>Welcome to the Quiz</h1>
         <p>Enter your team name to begin:</p>
-        <input type="text" id="teamName" placeholder="Team Name" required>
+        <input type="number" id="teamName" placeholder="Assigned number" required>
         <button class="btn" onclick="startQuiz()">Start Quiz</button>
     </div>
 
@@ -153,7 +153,254 @@ input:focus::placeholder {
     </div>
 
     <script>
-        const _0x323e2a=_0x3625;(function(_0x1559f9,_0x461f6b){const _0x212ea1=_0x3625,_0x45d6cf=_0x1559f9();while(!![]){try{const _0x547d1c=-parseInt(_0x212ea1(0x142))/0x1*(parseInt(_0x212ea1(0x178))/0x2)+parseInt(_0x212ea1(0x153))/0x3+parseInt(_0x212ea1(0x18d))/0x4*(parseInt(_0x212ea1(0x13e))/0x5)+parseInt(_0x212ea1(0x15f))/0x6+parseInt(_0x212ea1(0x17d))/0x7*(parseInt(_0x212ea1(0x194))/0x8)+parseInt(_0x212ea1(0x139))/0x9+parseInt(_0x212ea1(0x172))/0xa*(-parseInt(_0x212ea1(0x19c))/0xb);if(_0x547d1c===_0x461f6b)break;else _0x45d6cf['push'](_0x45d6cf['shift']());}catch(_0x41afc2){_0x45d6cf['push'](_0x45d6cf['shift']());}}}(_0x27a7,0xab878));const questions=[{'question':_0x323e2a(0x10e),'options':[_0x323e2a(0x176),_0x323e2a(0x163),_0x323e2a(0x110),_0x323e2a(0x1a1)],'answer':_0x323e2a(0x163)},{'question':_0x323e2a(0x162),'options':['7.5\x20km/hr',_0x323e2a(0x10d),_0x323e2a(0x155),'9\x20km/hr'],'answer':_0x323e2a(0x16e)},{'question':'What\x20is\x20the\x20probability\x20of\x20getting\x20an\x20even\x20number\x20when\x20a\x20dice\x20is\x20rolled?','options':[_0x323e2a(0x181),_0x323e2a(0x17e),_0x323e2a(0x1a3),_0x323e2a(0x14b)],'answer':_0x323e2a(0x1a3)},{'question':_0x323e2a(0x145),'options':[_0x323e2a(0x12c),_0x323e2a(0x195),_0x323e2a(0x16c),_0x323e2a(0x10f)],'answer':_0x323e2a(0x16c)},{'question':_0x323e2a(0x11f),'options':[_0x323e2a(0x19b),'E/12,F/14','E/10,F/12','D/10,E/10'],'answer':_0x323e2a(0x196)},{'question':'Sohan\x20started\x20a\x20business\x20with\x20a\x20capital\x20of\x20Rs.\x2080000.\x20After\x206\x20months,\x20Mohan\x20joined\x20as\x20a\x20partner\x20by\x20investing\x20Rs.\x2065000.\x20After\x20one\x20year,\x20they\x20earned\x20a\x20total\x20profit\x20of\x20Rs.\x2020000.\x20What\x20is\x20the\x20share\x20of\x20Sohan\x20in\x20the\x20profit?','options':[_0x323e2a(0x199),_0x323e2a(0x17b),_0x323e2a(0x177),_0x323e2a(0x11d)],'answer':'Rs.\x2011000'},{'question':_0x323e2a(0x191),'options':[_0x323e2a(0x18b),'135m','140m',_0x323e2a(0x12e)],'answer':_0x323e2a(0x12e)},{'question':_0x323e2a(0x111),'options':[_0x323e2a(0x137),_0x323e2a(0x176),'Friday',_0x323e2a(0x15c)],'answer':'Saturday'},{'question':_0x323e2a(0x1a2),'options':[_0x323e2a(0x186),_0x323e2a(0x171),'6000',_0x323e2a(0x187)],'answer':_0x323e2a(0x134)},{'question':_0x323e2a(0x158),'options':[_0x323e2a(0x18c),_0x323e2a(0x136),_0x323e2a(0x188),_0x323e2a(0x185)],'answer':_0x323e2a(0x18c)}];let currentQuestionIndex=0x0,userAnswers=Array(questions[_0x323e2a(0x118)])[_0x323e2a(0x115)](null),startTime,timerInterval,quizSubmitted=![];function checkPreviousAttempt(){const _0x3eb32f=_0x323e2a;let _0x3e1ea0=localStorage[_0x3eb32f(0x165)]('quizResults');_0x3e1ea0&&displayResults(JSON[_0x3eb32f(0x17c)](_0x3e1ea0));}checkPreviousAttempt(),checkPreviousAttempt();function startQuiz(){const _0x41acb3=_0x323e2a;let _0x4ab546=document[_0x41acb3(0x19f)](_0x41acb3(0x151))['value']['trim']();if(!_0x4ab546){alert(_0x41acb3(0x150));return;}localStorage[_0x41acb3(0x12b)](_0x41acb3(0x151),_0x4ab546),document[_0x41acb3(0x19f)](_0x41acb3(0x198))[_0x41acb3(0x13c)]=_0x41acb3(0x170)+_0x4ab546,document[_0x41acb3(0x19f)](_0x41acb3(0x14d))['style'][_0x41acb3(0x18e)]=_0x41acb3(0x184),document[_0x41acb3(0x19f)](_0x41acb3(0x17f))[_0x41acb3(0x1a4)][_0x41acb3(0x18e)]=_0x41acb3(0x128),document[_0x41acb3(0x16f)]['requestFullscreen']()['then'](()=>{const _0x59a9ff=_0x41acb3;startTime=Date[_0x59a9ff(0x124)](),timerInterval=setInterval(updateTimer,0x3e8),loadQuestion(0x0);})[_0x41acb3(0x130)](()=>{const _0x450834=_0x41acb3;alert('⚠️\x20Fullscreen\x20is\x20required!\x20Please\x20allow\x20fullscreen.'),location[_0x450834(0x183)]();}),document['addEventListener'](_0x41acb3(0x16d),checkFullscreen),document[_0x41acb3(0x12f)](_0x41acb3(0x116),checkVisibility),window['addEventListener']('blur',checkBlur),window[_0x41acb3(0x12f)](_0x41acb3(0x175),checkScreenSize);}function _0x3625(_0x2b3048,_0x2cd649){const _0x27a7ee=_0x27a7();return _0x3625=function(_0x36252b,_0x3412f2){_0x36252b=_0x36252b-0x10d;let _0x5c5132=_0x27a7ee[_0x36252b];return _0x5c5132;},_0x3625(_0x2b3048,_0x2cd649);}function updateTimer(){const _0x57246b=_0x323e2a;let _0x4f3d5f=Math[_0x57246b(0x14c)]((Date['now']()-startTime)/0x3e8);document[_0x57246b(0x19f)](_0x57246b(0x119))['textContent']=_0x57246b(0x167)+_0x4f3d5f+'s';}function loadQuestion(_0x5e3f4f){const _0x33a268=_0x323e2a,_0x2a213c=document['getElementById'](_0x33a268(0x17a));_0x2a213c['innerHTML']=_0x33a268(0x13b)+(_0x5e3f4f+0x1)+_0x33a268(0x13a)+questions[_0x5e3f4f][_0x33a268(0x12a)]+_0x33a268(0x13f)+'<div\x20class=\x22options\x22>'+questions[_0x5e3f4f][_0x33a268(0x117)][_0x33a268(0x197)](_0x2ddc2d=>_0x33a268(0x140)+_0x2ddc2d+'\x22\x20hidden>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x2ddc2d+_0x33a268(0x15b))[_0x33a268(0x1a0)]('')+'</div>',document[_0x33a268(0x19f)](_0x33a268(0x19d))[_0x33a268(0x169)][_0x33a268(0x120)](_0x33a268(0x154),_0x5e3f4f===questions[_0x33a268(0x118)]-0x1),document[_0x33a268(0x19f)]('submitBtn')['classList'][_0x33a268(0x120)](_0x33a268(0x154),_0x5e3f4f!==questions[_0x33a268(0x118)]-0x1);}function selectOption(_0x5dbe98){const _0x11e4d0=_0x323e2a;let _0x29e18f=document[_0x11e4d0(0x180)](_0x11e4d0(0x156));_0x29e18f[_0x11e4d0(0x15a)](_0x188f3f=>_0x188f3f[_0x11e4d0(0x169)][_0x11e4d0(0x190)](_0x11e4d0(0x11b))),_0x5dbe98['classList']['add'](_0x11e4d0(0x11b));}function saveAnswer(){const _0x2374a7=_0x323e2a;let _0x1d19cd=document[_0x2374a7(0x159)](_0x2374a7(0x138));userAnswers[currentQuestionIndex]=_0x1d19cd?_0x1d19cd[_0x2374a7(0x13c)]['trim']():null;}function _0x27a7(){const _0x39f89d=['Find\x20the\x20missing\x20term:\x20A/2,\x20B/4,\x20C/6,\x20D/8,\x20____','toggle','.modal-overlay','innerHTML','log','now','contextmenu','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20style=\x22border:\x200;\x20height:\x201px;\x20background:\x20#555;\x20margin:\x2010px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Total\x20Questions:</strong>\x20','quizResults','flex','⚠️\x20Fullscreen\x20was\x20exited!\x20Auto-submitting\x20quiz.','question','setItem','6\x20hours','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-overlay\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>🔐\x20Reset\x20Quiz</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Enter\x20the\x20reset\x20password\x20to\x20proceed:</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22password\x22\x20id=\x22resetPassword\x22\x20placeholder=\x22••••••••\x22\x20autofocus>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22confirmReset()\x22>✅\x20Confirm</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22closeModal()\x22>❌\x20Cancel</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','155m','addEventListener','catch','width','⚠️\x20You\x20switched\x20tabs!\x20Auto-submitting\x20quiz.','score','6000','appendChild','₹100','Monday','.options\x20label.selected','10569546OSclZu',':</strong>\x20','<p><strong>Q','textContent','✅\x20Quiz\x20has\x20been\x20reset\x20successfully.','1293170uKkmQd','</p>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20onclick=\x22selectOption(this)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22q\x22\x20value=\x22','outerHeight','47767qFmibt','wrong','preventDefault','A\x20pipe\x20can\x20fill\x20a\x20tank\x20in\x206\x20hours\x20and\x20another\x20pipe\x20can\x20empty\x20the\x20tank\x20in\x2012\x20hours.\x20If\x20both\x20pipes\x20are\x20opened\x20at\x20the\x20same\x20time,\x20the\x20tank\x20can\x20be\x20filled\x20in:','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Time\x20Taken:</strong>\x20','submitBtn','answer','8341343773','warning','2/3','floor','start-container','F12','⚠️\x20Window\x20was\x20minimized!\x20Auto-submitting\x20quiz.','🚨\x20Please\x20enter\x20your\x20team\x20name.','teamName','🚨\x20Please\x20select\x20an\x20answer\x20before\x20moving\x20to\x20the\x20next\x20question.','2856930jetJEm','hidden','8.5\x20km/hr','.options\x20label','ctrlKey','A\x20store\x20sells\x20apples\x20at\x20₹25\x20each.\x20If\x20you\x20buy\x204\x20apples,\x20you\x20get\x20a\x2010%\x20discount.\x20How\x20much\x20will\x204\x20apples\x20cost?','querySelector','forEach','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Saturday','value','totalQuestions','1296270iNKbXq','createElement','height','A\x20running\x20man\x20crosses\x20a\x20bridge\x20of\x20length\x20500\x20meters\x20in\x204\x20minutes.\x20At\x20what\x20speed\x20is\x20he\x20running?','Wednesday','correct','getItem','debugger','⏳\x20Time:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22max-width:\x20500px;\x20margin:\x20auto;\x20padding:\x2020px;\x20text-align:\x20center;\x20background:\x20#222;\x20color:\x20white;\x20border-radius:\x2010px;\x20box-shadow:\x200\x200\x2010px\x20rgba(0,0,0,0.5);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>🎉\x20Quiz\x20Completed</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Team:</strong>\x20','classList','%c\x20','timeTaken','12\x20hours','fullscreenchange','7.5\x20km/hr','documentElement','Team:\x20','3000','100bPLFfY','body','div','resize','Tuesday','Rs.\x2012000','50HeCBqF','🚨\x20DevTools\x20detected!\x20Auto-submitting\x20quiz.','quiz-content','Rs.\x2010000','parse','372624vwLxws','1/3','quiz-container','querySelectorAll','1/6','shiftKey','reload','none','₹70','666','12000','₹80','filter','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x22\x20onclick=\x22resetQuiz()\x22\x20style=\x22background:\x20red;\x20color:\x20white;\x20padding:\x2010px\x2020px;\x20border:\x20none;\x20border-radius:\x205px;\x20cursor:\x20pointer;\x22>Reset\x20Quiz</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','120m','₹90','16mmBFQI','display','attempted','remove','A\x20train\x20moving\x20at\x20a\x20speed\x20of\x2080\x20km/hr\x20crosses\x20a\x20pole\x20in\x207\x20seconds.\x20Find\x20the\x20length\x20of\x20the\x20train.','innerHeight','⚠️\x20Split-screen\x20detected!\x20Auto-submitting\x20quiz.','16nWuQsM','10\x20hours','E/10,F/12','map','teamDisplay','Rs.\x2011000','outerWidth','E/8,F/10','1745689dKSAuU','nextBtn','innerWidth','getElementById','join','Friday','Ten\x20friends\x20planned\x20to\x20share\x20equally\x20the\x20cost\x20of\x20buying\x20a\x20gift\x20for\x20their\x20teacher.\x20When\x20two\x20of\x20them\x20decided\x20not\x20to\x20contribute,\x20each\x20of\x20the\x20other\x20friends\x20had\x20to\x20pay\x20Rs\x20150\x20more.\x20The\x20cost\x20of\x20the\x20gift\x20was\x20Rs.\x20____','1/2','style','8\x20km/hr','If\x20January\x201,\x201996,\x20was\x20Monday,\x20what\x20day\x20of\x20the\x20week\x20was\x20January\x201,\x201997?','14\x20hours','Thursday','If\x20today\x20is\x20Monday,\x20what\x20day\x20of\x20the\x20week\x20will\x20it\x20be\x20after\x2061\x20days?','key','stringify','exitFullscreen','fill','visibilitychange','options','length','timer','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Wrong:</strong>\x20','selected','keydown','Rs.\x209000','click'];_0x27a7=function(){return _0x39f89d;};return _0x27a7();}document['getElementById'](_0x323e2a(0x19d))[_0x323e2a(0x12f)](_0x323e2a(0x11e),()=>{const _0x5b3663=_0x323e2a;saveAnswer();if(userAnswers[currentQuestionIndex]===null){document[_0x5b3663(0x19f)](_0x5b3663(0x14a))[_0x5b3663(0x13c)]=_0x5b3663(0x152);return;}document[_0x5b3663(0x19f)](_0x5b3663(0x14a))[_0x5b3663(0x13c)]='',currentQuestionIndex<questions[_0x5b3663(0x118)]-0x1&&(currentQuestionIndex++,loadQuestion(currentQuestionIndex));}),document[_0x323e2a(0x19f)](_0x323e2a(0x147))[_0x323e2a(0x12f)](_0x323e2a(0x11e),submitQuiz);function submitQuiz(){const _0x474c95=_0x323e2a;if(quizSubmitted)return;quizSubmitted=!![],clearInterval(timerInterval),saveAnswer();let _0x36ccca=userAnswers['filter'](_0x1b3ba1=>_0x1b3ba1!==null)['length'],_0x5cdb66=userAnswers[_0x474c95(0x189)]((_0x20e948,_0x56b306)=>_0x20e948===questions[_0x56b306][_0x474c95(0x148)])['length'],_0x3586d3=_0x36ccca-_0x5cdb66,_0x3f0957=Math[_0x474c95(0x14c)]((Date[_0x474c95(0x124)]()-startTime)/0x3e8),_0x3bab4c={'teamName':localStorage[_0x474c95(0x165)](_0x474c95(0x151)),'totalQuestions':questions[_0x474c95(0x118)],'attempted':_0x36ccca,'correct':_0x5cdb66,'wrong':_0x3586d3,'score':_0x5cdb66+'/'+questions['length'],'timeTaken':_0x3f0957+'s'};localStorage[_0x474c95(0x12b)](_0x474c95(0x127),JSON[_0x474c95(0x113)](_0x3bab4c)),displayResults(_0x3bab4c),document[_0x474c95(0x114)]();}function displayResults(_0x2553b3){const _0x383764=_0x323e2a;document[_0x383764(0x173)][_0x383764(0x122)]=_0x383764(0x168)+_0x2553b3[_0x383764(0x151)]+_0x383764(0x126)+_0x2553b3[_0x383764(0x15e)]+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Attempted:</strong>\x20'+_0x2553b3[_0x383764(0x18f)]+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Correct:</strong>\x20'+_0x2553b3[_0x383764(0x164)]+_0x383764(0x11a)+_0x2553b3[_0x383764(0x143)]+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Score:</strong>\x20'+_0x2553b3[_0x383764(0x133)]+_0x383764(0x146)+_0x2553b3[_0x383764(0x16b)]+_0x383764(0x18a);}function resetQuiz(){const _0x567128=_0x323e2a;let _0x3a888a=document[_0x567128(0x160)](_0x567128(0x174));_0x3a888a[_0x567128(0x122)]=_0x567128(0x12d),document[_0x567128(0x173)][_0x567128(0x135)](_0x3a888a);}function confirmReset(){const _0x4535dc=_0x323e2a;let _0x1aa76c=document[_0x4535dc(0x19f)]('resetPassword')[_0x4535dc(0x15d)];_0x1aa76c===_0x4535dc(0x149)?(localStorage['clear'](),alert(_0x4535dc(0x13d)),location['reload']()):(alert('❌\x20Incorrect\x20password.\x20Quiz\x20reset\x20denied.'),closeModal());}function closeModal(){const _0x2aa9d5=_0x323e2a;document['querySelector'](_0x2aa9d5(0x121))[_0x2aa9d5(0x190)]();}function checkScreenSize(){const _0x9321da=_0x323e2a;(window[_0x9321da(0x19e)]<screen[_0x9321da(0x131)]/1.5||window[_0x9321da(0x192)]<screen[_0x9321da(0x161)]/1.5)&&(alert(_0x9321da(0x193)),submitQuiz());}function checkFullscreen(){const _0xc89758=_0x323e2a;!document['fullscreenElement']&&!quizSubmitted&&(alert(_0xc89758(0x129)),submitQuiz());}function checkVisibility(){const _0x315053=_0x323e2a;document[_0x315053(0x154)]&&!quizSubmitted&&(alert(_0x315053(0x132)),submitQuiz());}function checkBlur(){const _0x2a3de6=_0x323e2a;!quizSubmitted&&(alert(_0x2a3de6(0x14f)),submitQuiz());}document['addEventListener'](_0x323e2a(0x125),_0x22699e=>_0x22699e['preventDefault']()),document['addEventListener'](_0x323e2a(0x11c),_0x2ea065=>{const _0x479633=_0x323e2a;(_0x2ea065[_0x479633(0x112)]===_0x479633(0x14e)||_0x2ea065[_0x479633(0x157)]&&_0x2ea065[_0x479633(0x182)]&&(_0x2ea065['key']==='I'||_0x2ea065[_0x479633(0x112)]==='J'||_0x2ea065[_0x479633(0x112)]==='C')||_0x2ea065[_0x479633(0x157)]&&_0x2ea065[_0x479633(0x112)]==='U')&&_0x2ea065[_0x479633(0x144)]();}),(function(){setInterval(()=>{const _0x3710a8=_0x3625,_0x8b527e=new Function(_0x3710a8(0x166));_0x8b527e();},0x64);}()),setInterval(()=>{const _0x37aabf=_0x323e2a;let _0x2bba71=performance[_0x37aabf(0x124)]();debugger;let _0xb27440=performance[_0x37aabf(0x124)]();_0xb27440-_0x2bba71>0x64&&(alert(_0x37aabf(0x179)),submitQuiz());},0x3e8),window[_0x323e2a(0x12f)](_0x323e2a(0x175),()=>{const _0x1061c6=_0x323e2a;(window[_0x1061c6(0x19a)]-window[_0x1061c6(0x19e)]>0xc8||window[_0x1061c6(0x141)]-window['innerHeight']>0xc8)&&(alert('🚨\x20DevTools\x20detected!\x20Auto-submitting\x20quiz.'),submitQuiz());}),document[_0x323e2a(0x12f)]('selectstart',_0x18f83c=>_0x18f83c[_0x323e2a(0x144)]()),document[_0x323e2a(0x12f)]('copy',_0x2b70fc=>_0x2b70fc[_0x323e2a(0x144)]()),setInterval(()=>{const _0x338536=_0x323e2a;console[_0x338536(0x123)](_0x338536(0x16a),'font-size:\x20200px;\x20background:\x20red;');},0x1);
+        const questions = [{
+  'question': "If January 1, 1996, was Monday, what day of the week was January 1, 1997?",
+  'options': ["Tuesday", "Wednesday", "Thursday", "Friday"],
+  'answer': "Wednesday"
+}, {
+  'question': "A running man crosses a bridge of length 500 meters in 4 minutes. At what speed is he running?",
+  'options': ["7.5 km/hr", "8 km/hr", "8.5 km/hr", "9 km/hr"],
+  'answer': "7.5 km/hr"
+}, {
+  'question': "What is the probability of getting an even number when a dice is rolled?",
+  'options': ["1/6", "1/3", "1/2", "2/3"],
+  'answer': "1/2"
+}, {
+  'question': "A pipe can fill a tank in 6 hours and another pipe can empty the tank in 12 hours. If both pipes are opened at the same time, the tank can be filled in:",
+  'options': ["6 hours", "10 hours", "12 hours", "14 hours"],
+  'answer': "12 hours"
+}, {
+  'question': "Find the missing term: A/2, B/4, C/6, D/8, ____",
+  'options': ["E/8,F/10", 'E/12,F/14', 'E/10,F/12', 'D/10,E/10'],
+  'answer': "E/10,F/12"
+}, {
+  'question': "Sohan started a business with a capital of Rs. 80000. After 6 months, Mohan joined as a partner by investing Rs. 65000. After one year, they earned a total profit of Rs. 20000. What is the share of Sohan in the profit?",
+  'options': ["Rs. 11000", "Rs. 10000", "Rs. 12000", "Rs. 9000"],
+  'answer': "Rs. 11000"
+}, {
+  'question': "A train moving at a speed of 80 km/hr crosses a pole in 7 seconds. Find the length of the train.",
+  'options': ["120m", '135m', '140m', "155m"],
+  'answer': "155m"
+}, {
+  'question': "If today is Monday, what day of the week will it be after 61 days?",
+  'options': ["Monday", "Tuesday", 'Friday', "Saturday"],
+  'answer': 'Saturday'
+}, {
+  'question': "Ten friends planned to share equally the cost of buying a gift for their teacher. When two of them decided not to contribute, each of the other friends had to pay Rs 150 more. The cost of the gift was Rs. ____",
+  'options': ["666", "3000", '6000', "12000"],
+  'answer': "6000"
+}, {
+  'question': "A store sells apples at ₹25 each. If you buy 4 apples, you get a 10% discount. How much will 4 apples cost?",
+  'options': ["₹90", "₹100", "₹80", "₹70"],
+  'answer': "₹90"
+}];
+const storageKey = "quiz1"; // Change for different quizzes
+
+let answeredQuestions = JSON.parse(localStorage.getItem(storageKey + "answeredQuestions")) || [];
+let score = 0;
+let currentQuestionIndex = 0;
+let userAnswers = Array(questions.length).fill(null);
+let startTime;
+let timerInterval;
+let quizSubmitted = false;
+
+function saveProgress() {
+    localStorage.setItem(storageKey + "answeredQuestions", JSON.stringify(answeredQuestions));
+}
+
+function checkPreviousAttempt() {
+    let savedResults = localStorage.getItem(storageKey + "quizResults");
+    if (savedResults) {
+        displayResults(JSON.parse(savedResults));
+    }
+}
+checkPreviousAttempt();
+
+function startQuiz() {
+    let playerName = document.getElementById("teamName").value.trim();
+    if (!playerName) {
+        alert("🚨 Please enter your Player Number.");
+        return;
+    }
+    localStorage.setItem(storageKey + "teamName", playerName);
+    document.getElementById("teamDisplay").textContent = "Player Number: " + playerName;
+    document.getElementById("start-container").style.display = "none";
+    document.getElementById("quiz-container").style.display = "flex";
+
+    document.documentElement.requestFullscreen().then(() => {
+        startTime = Date.now();
+        timerInterval = setInterval(updateTimer, 1000);
+        loadQuestion(0);
+    }).catch(() => {
+        alert("⚠️ Fullscreen is required! Please allow fullscreen.");
+        location.reload();
+    });
+
+    document.addEventListener("fullscreenchange", checkFullscreen);
+    document.addEventListener("visibilitychange", checkVisibility);
+    window.addEventListener('blur', checkBlur);
+    window.addEventListener("resize", checkScreenSize);
+}
+
+function updateTimer() {
+    let elapsed = Math.floor((Date.now() - startTime) / 1000);
+    document.getElementById("timer").textContent = "⏳ Time: " + elapsed + 's';
+}
+
+function loadQuestion(index) {
+    const quizContent = document.getElementById("quiz-content");
+    quizContent.innerHTML = `
+        <p><strong>Q${index + 1}:</strong> ${questions[index].question}</p>
+        <div class="options">
+            ${questions[index].options.map(option => `
+                <label onclick="selectOption(this)">
+                    <input type="radio" name="q" value="${option}" hidden>
+                    ${option}
+                </label>
+            `).join('')}
+        </div>`;
+
+    document.getElementById("nextBtn").classList.toggle("hidden", index === questions.length - 1);
+    document.getElementById("submitBtn").classList.toggle("hidden", index !== questions.length - 1);
+}
+
+function selectOption(selected) {
+    document.querySelectorAll(".options label").forEach(label => label.classList.remove("selected"));
+    selected.classList.add("selected");
+}
+
+function saveAnswer() {
+    let selectedOption = document.querySelector(".options label.selected");
+    userAnswers[currentQuestionIndex] = selectedOption ? selectedOption.textContent.trim() : null;
+}
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    saveAnswer();
+    if (userAnswers[currentQuestionIndex] === null) {
+        document.getElementById("warning").textContent = "🚨 Please select an answer before moving to the next question.";
+        return;
+    }
+    document.getElementById("warning").textContent = '';
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+    }
+});
+
+document.getElementById("submitBtn").addEventListener("click", submitQuiz);
+
+function submitQuiz() {
+    if (quizSubmitted) return;
+    quizSubmitted = true;
+    clearInterval(timerInterval);
+    saveAnswer();
+
+    let attempted = userAnswers.filter(ans => ans !== null).length;
+    let correct = userAnswers.filter((ans, i) => ans === questions[i].answer).length;
+    let wrong = attempted - correct;
+    let timeTaken = Math.floor((Date.now() - startTime) / 1000);
+
+    let results = {
+        'teamName': localStorage.getItem(storageKey + "teamName"),
+        'totalQuestions': questions.length,
+        'attempted': attempted,
+        'correct': correct,
+        'wrong': wrong,
+        'score': `${correct}/${questions.length}`,
+        'timeTaken': `${timeTaken}s`
+    };
+
+    localStorage.setItem(storageKey + "quizResults", JSON.stringify(results));
+    displayResults(results);
+    document.exitFullscreen();
+}
+
+function displayResults(results) {
+    document.body.innerHTML = `
+        <div style="max-width: 500px; margin: auto; padding: 20px; text-align: center; background: #222; color: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <h2>🎉 Quiz Completed</h2>
+            <p><strong>Player Number:</strong> ${results.teamName}</p>
+            <hr style="border: 0; height: 1px; background: #555; margin: 10px 0;">
+            <p><strong>Total Questions:</strong> ${results.totalQuestions}</p>
+            <p><strong>Attempted:</strong> ${results.attempted}</p>
+            <p><strong>Correct:</strong> ${results.correct}</p>
+            <p><strong>Wrong:</strong> ${results.wrong}</p>
+            <p><strong>Score:</strong> ${results.score}</p>
+            <p><strong>Time Taken:</strong> ${results.timeTaken}</p>
+            <button class="btn" onclick="resetQuiz()" style="background: red; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset Quiz</button>
+        </div>`;
+}
+
+function resetQuiz() {
+    let modal = document.createElement("div");
+    modal.innerHTML = `
+        <div class="modal-overlay">
+            <div class="modal-box">
+                <h2>🔐 Reset Quiz</h2>
+                <p>Enter the reset password to proceed:</p>
+                <input type="password" id="resetPassword" placeholder="••••••••" autofocus>
+                <div class="modal-actions">
+                    <button onclick="confirmReset()">✅ Confirm</button>
+                    <button onclick="closeModal()">❌ Cancel</button>
+                </div>
+            </div>
+        </div>`;
+    document.body.appendChild(modal);
+}
+
+function confirmReset() {
+    let password = document.getElementById('resetPassword').value;
+    if (password === "8341343773") {
+        localStorage.removeItem(storageKey + "answeredQuestions");
+        localStorage.removeItem(storageKey + "quizResults");
+        alert("✅ Quiz has been reset successfully.");
+        location.reload();
+    } else {
+        alert("❌ Incorrect password. Quiz reset denied.");
+        closeModal();
+    }
+}
+
+function closeModal() {
+    document.querySelector(".modal-overlay").remove();
+}
+
+// Anti-cheat measures
+function checkScreenSize() {
+    if (window.innerWidth < screen.width / 1.5 || window.innerHeight < screen.height / 1.5) {
+        alert("⚠️ Split-screen detected! Auto-submitting quiz.");
+        submitQuiz();
+    }
+}
+
+function checkFullscreen() {
+    if (!document.fullscreenElement && !quizSubmitted) {
+        alert("⚠️ Fullscreen was exited! Auto-submitting quiz.");
+        submitQuiz();
+    }
+}
+
+function checkVisibility() {
+    if (document.hidden && !quizSubmitted) {
+        alert("⚠️ You switched tabs! Auto-submitting quiz.");
+        submitQuiz();
+    }
+}
+
+function checkBlur() {
+    if (!quizSubmitted) {
+        alert("⚠️ Window was minimized! Auto-submitting quiz.");
+        submitQuiz();
+    }
+}
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("keydown", e => {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) || (e.ctrlKey && e.key === "U")) {
+        e.preventDefault();
+    }
+});
+
     </script>
     
 </body>
